@@ -1,13 +1,116 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500&family=Karla:wght@400;700&display=swap');
+
+:root {
+  /* Brand Colors */
+  --color-primary: #F4CE14;
+  --color-primary-rgb: 244, 206, 20;
+  --color-secondary: #495E57;
+  --color-secondary-rgb: 73, 94, 87;
+  --color-accent-1: #EE9972;
+  --color-accent-2: #FBDABB;
+  
+  /* Semantic */
+  --color-success: #457B9D;
+  --color-error: #E63946;
+  
+  /* Neutrals */
+  --color-bg-primary: #EDEFEE;
+  --color-bg-secondary: #FFFFFF;
+  --color-text-primary: #333333;
+  --color-text-secondary: #495E57;
+  --color-border: rgba(175, 175, 175, 0.2);
+  
+  /* Elevation */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 32px;
+  --sp-6: 64px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary) 50%,
+    var(--color-secondary) 50%
+  ) no-repeat;
+  background-color: var(--color-bg-primary);
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-bg-primary);
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+}
+
+h1 { font-size: 64px; line-height: 1.1; color: var(--color-primary); }
+h2 { font-size: 40px; line-height: 1.2; color: var(--color-bg-primary); }
+h3 { font-family: 'Karla', sans-serif; font-weight: 700; font-size: 20px; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--sp-4);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-out;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-premium);
+}
+
+section {
+  padding: var(--sp-6) 0;
 }
