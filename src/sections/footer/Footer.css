@@ -1,0 +1,56 @@
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-bg-primary);
+}
+
+.footer-container {
+    /* Padding is handled in the JSX classes */
+}
+
+footer h6 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.75rem;
+}
+
+footer a {
+    color: var(--color-bg-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--color-primary);
+}
+
+footer img {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+ul.social-icons li {
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+.social-icons svg {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons svg:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+    transform: translateY(-3px);
+}

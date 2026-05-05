@@ -1,0 +1,51 @@
+.about-section {
+    background-color: var(--color-bg-primary);
+}
+
+.about-section h1 {
+    color: var(--color-primary);
+}
+
+.about-section h2 {
+    color: var(--color-secondary);
+}
+
+.about-section p {
+    text-align: justify;
+    color: var(--color-text-primary);
+}
+
+.about-img-container {
+    position: absolute;
+    width: 280px;
+    height: 350px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.about-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-a {
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.img-b {
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border: 4px solid white;
+}
+
+@media (max-width: 768px) {
+    .about-img-container {
+        width: 220px;
+        height: 280px;
+    }
+}
