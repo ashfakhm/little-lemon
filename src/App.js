@@ -1,27 +1,15 @@
-import Nav from "./components/layout/Nav";
-import Hero from "./components/sections/Hero";
-import Specials from "./components/sections/Specials";
-import About from "./components/sections/About";
-import Testimonials from "./components/sections/Testimonials";
-import BookingForm from "./components/BookingForm";
-import Footer from "./components/layout/Footer";
-import "./App.css";
+import './App.css';
+import { Outlet } from 'react-router-dom';
+import Header from './sections/header/Header';
+import Footer from './sections/footer/Footer';
+import ScrollToHash from './components/ScrollToHash';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <Nav />
-      </header>
-      <main>
-        <Hero />
-        <Specials />
-        <Testimonials />
-        <div id="reservations">
-          <BookingForm />
-        </div>
-        <About />
-      </main>
+    <div className='App'>
+      <ScrollToHash />
+      <Header />
+      <Outlet />
       <Footer />
     </div>
   );
