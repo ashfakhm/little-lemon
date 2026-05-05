@@ -1,0 +1,31 @@
+.food-card {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.price-tag {
+    color: var(--color-accent-1);
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.delivery-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    color: var(--color-text-primary);
+}
+
+.delivery-btn:hover {
+    color: var(--color-secondary);
+}
