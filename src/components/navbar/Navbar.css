@@ -1,0 +1,33 @@
+.header-list ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-secondary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
